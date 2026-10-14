@@ -1,36 +1,49 @@
 # DCT Image Steganography
 
-A Python-based image steganography application that hides secret text messages inside grayscale images using the Discrete Cosine Transform (DCT).
+A Digital Image Processing project that hides secret text messages inside grayscale images using the Discrete Cosine Transform (DCT).
 
 ## Features
-- Embed secret text into an image using 8×8 DCT blocks.
+
+- Embed secret text into images using 8×8 DCT blocks.
 - Extract hidden messages from stego images.
-- Download the generated image in PNG format.
+- Download the output image as PNG.
 - Calculate Mean Squared Error (MSE) and Peak Signal-to-Noise Ratio (PSNR).
 - View image differences and message capacity.
-- Interactive web interface built with Streamlit.
+- Interactive Streamlit web interface.
 
-## Technologies
+## Technologies Used
+
 - Python
 - OpenCV
 - NumPy
 - Streamlit
 
-## Installation
+## Installation and Usage
 
-1. Clone this repository.
-2. Install the dependencies:
+1. Install Python.
+2. Open a terminal in the project folder.
+3. Install dependencies:
 
-   `pip install -r requirements.txt`
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Run the application:
+4. Run the application:
 
-   `streamlit run app.py`
+   ```bash
+   streamlit run app.py
+   ```
 
 ## How It Works
 
-The application converts an image to grayscale, processes it in 8×8 blocks, and modifies a selected DCT coefficient to represent each message bit. The same technique is used to extract the hidden text.
+The application converts the cover image to grayscale and divides it into 8×8 blocks. It modifies a selected DCT coefficient to represent message bits and uses the same technique to extract the hidden text.
+
+## Evaluation
+
+Image quality is evaluated using MSE, PSNR, and pixel-difference measurements.
 
 ## Academic Project
 
-Developed as a Digital Image Processing semester project. This is an educational demonstration and does not provide message encryption.
+Developed as a semester project for Digital Image Processing.
+
+**Note:** This is an educational demonstration. It does not encrypt the secret message.
